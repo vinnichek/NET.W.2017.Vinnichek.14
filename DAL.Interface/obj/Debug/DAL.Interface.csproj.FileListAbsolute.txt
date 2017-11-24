@@ -1,0 +1,8 @@
+/Users/vinnichek/Downloads/StairwayPattern/DAL.Interface/bin/Debug/DAL.Interface.dll
+/Users/vinnichek/Downloads/StairwayPattern/DAL.Interface/bin/Debug/DAL.Interface.pdb
+/Users/vinnichek/Downloads/StairwayPattern/DAL.Interface/bin/Debug/BLL.Interface.dll
+/Users/vinnichek/Downloads/StairwayPattern/DAL.Interface/bin/Debug/BLL.Interface.pdb
+/Users/vinnichek/Downloads/StairwayPattern/DAL.Interface/obj/Debug/DAL.Interface.csproj.CoreCompileInputs.cache
+/Users/vinnichek/Downloads/StairwayPattern/DAL.Interface/obj/Debug/DAL.Interface.dll
+/Users/vinnichek/Downloads/StairwayPattern/DAL.Interface/obj/Debug/DAL.Interface.pdb
+/Users/vinnichek/Downloads/StairwayPattern/DAL.Interface/obj/Debug/DAL.Interface.csprojResolveAssemblyReference.cache

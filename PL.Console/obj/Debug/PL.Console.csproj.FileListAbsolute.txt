@@ -1,0 +1,14 @@
+/Users/vinnichek/Downloads/StairwayPattern/PL.Console/bin/Debug/PL.Console.exe
+/Users/vinnichek/Downloads/StairwayPattern/PL.Console/bin/Debug/PL.Console.pdb
+/Users/vinnichek/Downloads/StairwayPattern/PL.Console/bin/Debug/BLL.dll
+/Users/vinnichek/Downloads/StairwayPattern/PL.Console/bin/Debug/BLL.Interface.dll
+/Users/vinnichek/Downloads/StairwayPattern/PL.Console/bin/Debug/DAL.dll
+/Users/vinnichek/Downloads/StairwayPattern/PL.Console/bin/Debug/BLL.pdb
+/Users/vinnichek/Downloads/StairwayPattern/PL.Console/bin/Debug/BLL.Interface.pdb
+/Users/vinnichek/Downloads/StairwayPattern/PL.Console/bin/Debug/DAL.pdb
+/Users/vinnichek/Downloads/StairwayPattern/PL.Console/obj/Debug/PL.Console.csproj.CoreCompileInputs.cache
+/Users/vinnichek/Downloads/StairwayPattern/PL.Console/obj/Debug/PL.Console.exe
+/Users/vinnichek/Downloads/StairwayPattern/PL.Console/obj/Debug/PL.Console.pdb
+/Users/vinnichek/Downloads/StairwayPattern/PL.Console/obj/Debug/PL.Console.csprojResolveAssemblyReference.cache
+/Users/vinnichek/Downloads/StairwayPattern/PL.Console/bin/Debug/DAL.Interface.dll
+/Users/vinnichek/Downloads/StairwayPattern/PL.Console/bin/Debug/DAL.Interface.pdb
