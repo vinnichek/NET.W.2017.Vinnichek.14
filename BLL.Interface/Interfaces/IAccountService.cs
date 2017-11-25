@@ -7,6 +7,7 @@ namespace BLL.Interface.Interfaces
     {
         IEnumerable<Account> GetAllAccounts();
         void OpenAccount(string name, AccountType accountType, IAccountNumberCreateService creator);
+        void CloseAccount(string accountNumber);
         void DepositAccount(string accountNumber, decimal amount);
         void WithdrawAccount(string accountNumber, decimal amount);
     }

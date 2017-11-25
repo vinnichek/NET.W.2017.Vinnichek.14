@@ -8,6 +8,7 @@ namespace DAL.Interface
     {
         IEnumerable<Account> GetAllAccounts();
         void Create(Account account);
+        void Delete(Account account);
         Account GetByNumber(string accountNumber);
         void Update(Account account);
     }

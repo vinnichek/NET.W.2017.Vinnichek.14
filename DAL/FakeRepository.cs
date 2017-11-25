@@ -15,6 +15,13 @@ namespace DAL
             repository.Add(account);
         }
 
+        public void Delete(Account account)
+        {
+            if (!repository.Contains(account))
+                throw new ArgumentException($"{nameof(account)} doesn't consist.");
+            repository.Remove(account);
+        }
+
         public Account GetByNumber(string accountNumber)
         {
             var account = repository.Single(acc => acc.AccountNumber == accountNumber);

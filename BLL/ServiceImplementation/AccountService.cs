@@ -26,19 +26,11 @@ namespace BLL.ServiceImplementation
 
             repository.Create(account);
         }
-        private static Type GetTypeOfAccount(AccountType accountType)
+
+        public void CloseAccount(string accountNumber)
         {
-            switch (accountType)
-            {
-                case AccountType.Base:
-                    return typeof(BaseAccount);
-                case AccountType.Silver:
-                    return typeof(SilverAccount);
-                case AccountType.Gold:
-                    return typeof(GoldAccount);
-                default:
-                    return typeof(BaseAccount);
-            }
+            Account account = repository.GetByNumber(accountNumber);
+            repository.Delete(account);
         }
 
         public void DepositAccount(string accountNumber, decimal amount)
@@ -60,6 +52,21 @@ namespace BLL.ServiceImplementation
         }
 
         public IEnumerable<Account> GetAllAccounts() => repository.GetAllAccounts();
+
+        private static Type GetTypeOfAccount(AccountType accountType)
+        {
+            switch (accountType)
+            {
+                case AccountType.Base:
+                    return typeof(BaseAccount);
+                case AccountType.Silver:
+                    return typeof(SilverAccount);
+                case AccountType.Gold:
+                    return typeof(GoldAccount);
+                default:
+                    return typeof(BaseAccount);
+            }
+        }
 
         private int GetNumberOfAccounts() => GetAllAccounts().ToList().Count;
     }
