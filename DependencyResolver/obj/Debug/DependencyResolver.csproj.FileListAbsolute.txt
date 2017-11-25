@@ -1,0 +1,16 @@
+/Users/vinnichek/Downloads/StairwayPattern/DependencyResolver/bin/Debug/DependencyResolver.dll
+/Users/vinnichek/Downloads/StairwayPattern/DependencyResolver/bin/Debug/DependencyResolver.pdb
+/Users/vinnichek/Downloads/StairwayPattern/DependencyResolver/bin/Debug/BLL.dll
+/Users/vinnichek/Downloads/StairwayPattern/DependencyResolver/bin/Debug/BLL.Interface.dll
+/Users/vinnichek/Downloads/StairwayPattern/DependencyResolver/bin/Debug/DAL.dll
+/Users/vinnichek/Downloads/StairwayPattern/DependencyResolver/bin/Debug/DAL.Interface.dll
+/Users/vinnichek/Downloads/StairwayPattern/DependencyResolver/bin/Debug/Ninject.dll
+/Users/vinnichek/Downloads/StairwayPattern/DependencyResolver/bin/Debug/BLL.pdb
+/Users/vinnichek/Downloads/StairwayPattern/DependencyResolver/bin/Debug/BLL.Interface.pdb
+/Users/vinnichek/Downloads/StairwayPattern/DependencyResolver/bin/Debug/DAL.pdb
+/Users/vinnichek/Downloads/StairwayPattern/DependencyResolver/bin/Debug/DAL.Interface.pdb
+/Users/vinnichek/Downloads/StairwayPattern/DependencyResolver/bin/Debug/Ninject.xml
+/Users/vinnichek/Downloads/StairwayPattern/DependencyResolver/obj/Debug/DependencyResolver.csprojResolveAssemblyReference.cache
+/Users/vinnichek/Downloads/StairwayPattern/DependencyResolver/obj/Debug/DependencyResolver.csproj.CoreCompileInputs.cache
+/Users/vinnichek/Downloads/StairwayPattern/DependencyResolver/obj/Debug/DependencyResolver.dll
+/Users/vinnichek/Downloads/StairwayPattern/DependencyResolver/obj/Debug/DependencyResolver.pdb

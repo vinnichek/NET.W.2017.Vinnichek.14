@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8D60E7CA-BFAF-406E-893B-6979F1ACC81A}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>PL.Console</RootNamespace>
-    <AssemblyName>PL.Console</AssemblyName>
+    <ProjectGuid>{508D88EF-8121-434B-A138-4C7D6B38BC99}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DependencyResolver</RootNamespace>
+    <AssemblyName>DependencyResolver</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -17,14 +17,14 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ExternalConsole>true</ExternalConsole>
+    <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ExternalConsole>true</ExternalConsole>
+    <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -33,33 +33,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="NInjectDependencyResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{2C09A78F-009B-484B-BD9B-9D9449EF2DB9}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BLL.Interface\BLL.Interface.csproj">
       <Project>{1B2D5675-D8C7-4295-AA6C-A0D7B7B8909E}</Project>
       <Name>BLL.Interface</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DAL.Interface\DAL.Interface.csproj">
-      <Project>{9EE2284B-4AF7-4D6A-94A6-1909586C46B1}</Project>
-      <Name>DAL.Interface</Name>
     </ProjectReference>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{75907038-F0BD-4906-A241-C45D9447F2CE}</Project>
       <Name>DAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BLL\BLL.csproj">
-      <Project>{2C09A78F-009B-484B-BD9B-9D9449EF2DB9}</Project>
-      <Name>BLL</Name>
+    <ProjectReference Include="..\DAL.Interface\DAL.Interface.csproj">
+      <Project>{9EE2284B-4AF7-4D6A-94A6-1909586C46B1}</Project>
+      <Name>DAL.Interface</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DependencyResolver\DependencyResolver.csproj">
-      <Project>{508D88EF-8121-434B-A138-4C7D6B38BC99}</Project>
-      <Name>DependencyResolver</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

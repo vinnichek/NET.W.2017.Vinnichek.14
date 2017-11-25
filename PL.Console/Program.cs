@@ -1,27 +1,44 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using BLL.Interface.Entities;
 using BLL.Interface.Interfaces;
-using BLL.ServiceImplementation;
-using DAL.Interface;
-using DAL;
+using Ninject;
+using DependencyResolver;
+using System.Linq;
 
 namespace PL.Console
 {
-    class MainClass
+    class Program
     {
-        public static void Main(string[] args)
+        private static readonly IAccountNumberCreateService AccountNumberCreateService;
+        private static readonly IKernel NinjectKernel;
+
+        static Program()
         {
-            IRepository rep = new FakeRepository();
-            IAccountService service = new AccountService(rep);
+            NinjectKernel = new StandardKernel();
+            NInjectDependencyResolver.Configure(NinjectKernel);
+            AccountNumberCreateService = NinjectKernel.Get<IAccountNumberCreateService>();
+        }
 
-            IAccountNumberCreateService creator = new AccountNumberCreator();
+        private static void Main()
+        {
+            try
+            {
+                var service = NinjectKernel.Get<IAccountService>();
+                Test(service);
+            }
 
-            service.OpenAccount("Ira Vinnichek", AccountType.Base, creator);
-            service.OpenAccount("Kate Shenets", AccountType.Gold, creator);
-            service.OpenAccount("Korzhova Lera", AccountType.Silver, creator);
-            service.OpenAccount("Ivanov Kirill", AccountType.Base, creator);
+            catch (Exception e)
+            {
+                System.Console.WriteLine(e.Message);
+            }
+        }
+
+        private static void Test(IAccountService service)
+        {
+            service.OpenAccount("Ira Vinnichek", AccountType.Base, AccountNumberCreateService);
+            service.OpenAccount("Kate Shenets", AccountType.Gold, AccountNumberCreateService);
+            service.OpenAccount("Korzhova Lera", AccountType.Silver, AccountNumberCreateService);
+            service.OpenAccount("Ivanov Kirill", AccountType.Base, AccountNumberCreateService);
 
             foreach (var item in service.GetAllAccounts())
             {
@@ -35,18 +52,6 @@ namespace PL.Console
             foreach (var t in creditNumbers)
             {
                 service.DepositAccount(t, 100);
-            }
-
-            foreach (var item in service.GetAllAccounts())
-            {
-                System.Console.WriteLine(item);
-            }
-
-            System.Console.WriteLine("------");
-
-            foreach (var t in creditNumbers)
-            {
-                service.WithdrawAccount(t, 10);
             }
 
             foreach (var item in service.GetAllAccounts())

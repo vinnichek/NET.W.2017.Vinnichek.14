@@ -12,3 +12,7 @@
 /Users/vinnichek/Downloads/StairwayPattern/PL.Console/obj/Debug/PL.Console.csprojResolveAssemblyReference.cache
 /Users/vinnichek/Downloads/StairwayPattern/PL.Console/bin/Debug/DAL.Interface.dll
 /Users/vinnichek/Downloads/StairwayPattern/PL.Console/bin/Debug/DAL.Interface.pdb
+/Users/vinnichek/Downloads/StairwayPattern/PL.Console/bin/Debug/DependencyResolver.dll
+/Users/vinnichek/Downloads/StairwayPattern/PL.Console/bin/Debug/Ninject.dll
+/Users/vinnichek/Downloads/StairwayPattern/PL.Console/bin/Debug/DependencyResolver.pdb
+/Users/vinnichek/Downloads/StairwayPattern/PL.Console/bin/Debug/Ninject.xml
