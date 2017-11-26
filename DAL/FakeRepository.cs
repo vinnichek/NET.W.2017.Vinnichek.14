@@ -18,7 +18,7 @@ namespace DAL
         public void Delete(Account account)
         {
             if (!repository.Contains(account))
-                throw new ArgumentException($"{nameof(account)} doesn't consist.");
+                throw new ArgumentException($"{nameof(account)} doesn't exist.");
             repository.Remove(account);
         }
 
