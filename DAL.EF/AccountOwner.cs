@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.EF
 {
-    public class AccountOwner
+    class AccountOwner
     {
         public int AccountOwnerId { get; set; }
         public string Name { get; set; }

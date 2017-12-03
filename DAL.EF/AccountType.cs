@@ -10,5 +10,6 @@ namespace DAL.EF
     {
         public int AccountTypeId { get; set; }
         public string Type { get; set; }
+
     }
 }
