@@ -6,6 +6,7 @@ using BLL.Interface.Entities;
 using BLL.Interface.Interfaces;
 using BLL.ServiceImplementation;
 using DAL.Interface;
+using DAL.Interface.DTO;
 using Moq;
 using NUnit.Framework;
 
@@ -45,7 +46,7 @@ namespace BLL.Tests
             accountService.OpenAccount(name, AccountType.Base, accountNumberCreateServiceMock.Object);
 
             repositoryMock.Verify(
-                repository => repository.Create(It.Is<Account>(account => string.Equals(account.AccountNumber, accountNumber, StringComparison.Ordinal))), Times.Once);
+                repository => repository.Create(It.Is<DalAccount>(account => string.Equals(account.AccountNumber, accountNumber, StringComparison.Ordinal))), Times.Once);
 
         }
 
@@ -70,7 +71,7 @@ namespace BLL.Tests
             }
 
             repositoryMock.Verify(
-                repository => repository.Update(It.Is<Account>(account => string.Equals(account.AccountNumber, accountNumber, StringComparison.Ordinal))), Times.AtMostOnce());
+                repository => repository.Update(It.Is<DalAccount>(account => string.Equals(account.AccountNumber, accountNumber, StringComparison.Ordinal))), Times.AtMostOnce());
 
         }
 
@@ -94,7 +95,7 @@ namespace BLL.Tests
             }
 
             repositoryMock.Verify(
-                repository => repository.Delete(It.Is<Account>(account => string.Equals(account.AccountNumber, accountNumber, StringComparison.Ordinal))), Times.AtMostOnce());
+                repository => repository.Delete(It.Is<DalAccount>(account => string.Equals(account.AccountNumber, accountNumber, StringComparison.Ordinal))), Times.AtMostOnce());
         }
     }
 }

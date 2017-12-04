@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -40,21 +40,25 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BLL\BLL.csproj">
-      <Project>{2C09A78F-009B-484B-BD9B-9D9449EF2DB9}</Project>
-      <Name>BLL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\BLL.Interface\BLL.Interface.csproj">
-      <Project>{1B2D5675-D8C7-4295-AA6C-A0D7B7B8909E}</Project>
+      <Project>{1b2d5675-d8c7-4295-aa6c-a0d7b7b8909e}</Project>
       <Name>BLL.Interface</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{75907038-F0BD-4906-A241-C45D9447F2CE}</Project>
-      <Name>DAL</Name>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{2c09a78f-009b-484b-bd9b-9d9449ef2db9}</Project>
+      <Name>BLL</Name>
     </ProjectReference>
     <ProjectReference Include="..\DAL.Interface\DAL.Interface.csproj">
       <Project>{9EE2284B-4AF7-4D6A-94A6-1909586C46B1}</Project>
       <Name>DAL.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{75907038-f0bd-4906-a241-c45d9447f2ce}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\D\DAL.EF.csproj">
+      <Project>{40d352e7-6305-4680-96fe-b811dab2f119}</Project>
+      <Name>DAL.EF</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

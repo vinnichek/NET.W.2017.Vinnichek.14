@@ -16,3 +16,25 @@
 /Users/vinnichek/Downloads/StairwayPattern/PL.Console/bin/Debug/Ninject.dll
 /Users/vinnichek/Downloads/StairwayPattern/PL.Console/bin/Debug/DependencyResolver.pdb
 /Users/vinnichek/Downloads/StairwayPattern/PL.Console/bin/Debug/Ninject.xml
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\obj\Debug\PL.Console.csprojResolveAssemblyReference.cache
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\obj\Debug\PL.Console.csproj.CoreCompileInputs.cache
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\obj\Debug\PL.Console.exe
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\obj\Debug\PL.Console.pdb
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\bin\Debug\PL.Console.exe
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\bin\Debug\PL.Console.pdb
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\bin\Debug\BLL.dll
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\bin\Debug\BLL.Interface.dll
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\bin\Debug\D.dll
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\bin\Debug\DAL.dll
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\bin\Debug\DAL.Interface.dll
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\bin\Debug\DependencyResolver.dll
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\bin\Debug\Ninject.dll
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\bin\Debug\EntityFramework.dll
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\bin\Debug\BLL.Interface.pdb
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\bin\Debug\DAL.Interface.pdb
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\bin\Debug\DAL.pdb
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\bin\Debug\BLL.pdb
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\bin\Debug\DependencyResolver.pdb
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\bin\Debug\D.pdb
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\bin\Debug\Ninject.xml
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\bin\Debug\EntityFramework.xml

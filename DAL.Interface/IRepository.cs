@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using BLL.Interface.Entities;
+using DAL.Interface.DTO;
 
 namespace DAL.Interface
 {
     public interface IRepository
     {
-        IEnumerable<Account> GetAllAccounts();
-        void Create(Account account);
-        void Delete(Account account);
-        Account GetByNumber(string accountNumber);
-        void Update(Account account);
+        IEnumerable<DalAccount> GetAllAccounts();
+        void Create(DalAccount account);
+        void Delete(DalAccount account);
+        DalAccount GetByNumber(string accountNumber);
+        void Update(DalAccount account);
     }
 }

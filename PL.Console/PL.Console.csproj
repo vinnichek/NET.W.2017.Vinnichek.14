@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -56,6 +56,10 @@
     <ProjectReference Include="..\DependencyResolver\DependencyResolver.csproj">
       <Project>{508D88EF-8121-434B-A138-4C7D6B38BC99}</Project>
       <Name>DependencyResolver</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\D\DAL.EF.csproj">
+      <Project>{40d352e7-6305-4680-96fe-b811dab2f119}</Project>
+      <Name>DAL.EF</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

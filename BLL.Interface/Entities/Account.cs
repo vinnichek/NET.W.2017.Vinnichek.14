@@ -6,7 +6,7 @@ namespace BLL.Interface.Entities
     {
         #region Fields
         private string accountNumber;
-        private string name;
+        private string ownerName;
         private decimal balance;
         private int benefitPoints;
         #endregion
@@ -18,10 +18,10 @@ namespace BLL.Interface.Entities
             private set => accountNumber = !string.IsNullOrWhiteSpace(value) ? value : throw new ArgumentException(nameof(accountNumber));
         }
 
-        public string Name
+        public string OwnerName
         {
-            get => name;
-            private set => name = !string.IsNullOrWhiteSpace(value) ? value : throw new ArgumentException(nameof(name));
+            get => ownerName;
+            private set => ownerName = !string.IsNullOrWhiteSpace(value) ? value : throw new ArgumentException(nameof(ownerName));
         }
 
         public decimal Balance
@@ -38,20 +38,20 @@ namespace BLL.Interface.Entities
         #endregion
 
         #region Ctors
-        protected Account(string accountNumber, string name)
+        protected Account(string accountNumber, string ownerName)
         {
             this.AccountNumber = accountNumber;
-            this.Name = name;
+            this.OwnerName = ownerName;
         }
 
-        protected Account(string accountNumber, string name, decimal balance) : this(accountNumber, name)
+        protected Account(string accountNumber, string ownerName, decimal balance) : this(accountNumber, ownerName)
         {
             this.Balance = balance;
         }
 
-        protected Account(string accountNumber, string name, decimal balance, int points) : this(accountNumber, name, balance)
+        protected Account(string accountNumber, string ownerName, decimal balance, int benefitPoints) : this(accountNumber, ownerName, balance)
         {
-            this.BenefitPoints = points;
+            this.BenefitPoints = benefitPoints;
         }
         #endregion
 
@@ -89,7 +89,7 @@ namespace BLL.Interface.Entities
 
         #region overriding ToSrting()
         public override string ToString()
-            => $"#{this.AccountNumber} Name: {this.Name} Balance: {this.Balance} Benefit points: {this.benefitPoints}";
+            => $"#{AccountNumber} Name: {OwnerName} Balance: {Balance} Benefit points: {benefitPoints}";
         #endregion
     }
 }

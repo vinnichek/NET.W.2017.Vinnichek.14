@@ -19,3 +19,24 @@
 /Users/vinnichek/Downloads/StairwayPattern/BLL.Tests/obj/Debug/BLL.Tests.csproj.CoreCompileInputs.cache
 /Users/vinnichek/Downloads/StairwayPattern/BLL.Tests/obj/Debug/BLL.Tests.dll
 /Users/vinnichek/Downloads/StairwayPattern/BLL.Tests/obj/Debug/BLL.Tests.pdb
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Tests\bin\Debug\BLL.Tests.dll
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Tests\bin\Debug\BLL.Tests.pdb
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Tests\bin\Debug\BLL.dll
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Tests\bin\Debug\BLL.Interface.dll
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Tests\bin\Debug\Castle.Core.dll
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Tests\bin\Debug\DAL.dll
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Tests\bin\Debug\DAL.Interface.dll
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Tests\bin\Debug\Moq.dll
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Tests\bin\Debug\nunit.framework.dll
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Tests\bin\Debug\BLL.Interface.pdb
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Tests\bin\Debug\DAL.Interface.pdb
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Tests\bin\Debug\BLL.pdb
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Tests\bin\Debug\DAL.pdb
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Tests\bin\Debug\Castle.Core.xml
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Tests\bin\Debug\Moq.pdb
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Tests\bin\Debug\Moq.xml
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Tests\bin\Debug\nunit.framework.xml
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Tests\obj\Debug\BLL.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Tests\obj\Debug\BLL.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Tests\obj\Debug\BLL.Tests.dll
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Tests\obj\Debug\BLL.Tests.pdb

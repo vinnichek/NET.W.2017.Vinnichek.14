@@ -4,6 +4,7 @@ using BLL.Interface.Interfaces;
 using Ninject;
 using DependencyResolver;
 using System.Linq;
+using DAL.EF;
 
 namespace PL.Console
 {
@@ -31,20 +32,32 @@ namespace PL.Console
             {
                 System.Console.WriteLine(e.Message);
             }
+            System.Console.ReadKey();
+
         }
 
         private static void Test(IAccountService service)
         {
-            service.OpenAccount("Ira Vinnichek", AccountType.Base, AccountNumberCreateService);
-            service.OpenAccount("Kate Shenets", AccountType.Gold, AccountNumberCreateService);
-            service.OpenAccount("Korzhova Lera", AccountType.Silver, AccountNumberCreateService);
-            service.OpenAccount("Ivanov Kirill", AccountType.Base, AccountNumberCreateService);
+            service.OpenAccount(AccountType.Base, AccountNumberCreateService,"Ira Vinnichek");
+            service.OpenAccount(AccountType.Gold, AccountNumberCreateService, "Kate Shenets");
+            service.OpenAccount(AccountType.Silver, AccountNumberCreateService, "Korzhova Lera");
+            service.OpenAccount(AccountType.Base, AccountNumberCreateService, "Ivanov Kirill");
 
             foreach (var item in service.GetAllAccounts())
             {
                 System.Console.WriteLine(item);
             }
 
+            System.Console.WriteLine("------");
+
+            //service.CloseAccount("1");
+
+            service.DepositAccount("1", 130);
+            foreach (var item in service.GetAllAccounts())
+            {
+                System.Console.WriteLine(item);
+            }
+            
             System.Console.WriteLine("------");
 
             var creditNumbers = service.GetAllAccounts().Select(acc => acc.AccountNumber).ToArray();

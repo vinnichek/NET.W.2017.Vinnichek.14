@@ -41,14 +41,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Account.cs" />
-    <Compile Include="Entities\BaseAccount.cs" />
     <Compile Include="Entities\AccountType.cs" />
+    <Compile Include="Entities\BaseAccount.cs" />
     <Compile Include="Entities\SilverAccount.cs" />
     <Compile Include="Interfaces\IAccountNumberCreateService.cs" />
     <Compile Include="Interfaces\IAccountService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\GoldAccount.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DAL.Interface\DAL.Interface.csproj">
+      <Project>{9ee2284b-4af7-4d6a-94a6-1909586c46b1}</Project>
+      <Name>DAL.Interface</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
