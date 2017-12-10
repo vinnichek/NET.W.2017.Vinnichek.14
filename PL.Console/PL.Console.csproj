@@ -31,6 +31,7 @@
     <Reference Include="Ninject">
       <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
     </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -41,13 +42,13 @@
       <Project>{1B2D5675-D8C7-4295-AA6C-A0D7B7B8909E}</Project>
       <Name>BLL.Interface</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DAL.EF\DAL.EF.csproj">
+      <Project>{ed8bc6a8-6bff-4c58-8f4e-73cf2d6c6300}</Project>
+      <Name>DAL.EF</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DAL.Interface\DAL.Interface.csproj">
       <Project>{9EE2284B-4AF7-4D6A-94A6-1909586C46B1}</Project>
       <Name>DAL.Interface</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{75907038-F0BD-4906-A241-C45D9447F2CE}</Project>
-      <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{2C09A78F-009B-484B-BD9B-9D9449EF2DB9}</Project>
@@ -57,12 +58,9 @@
       <Project>{508D88EF-8121-434B-A138-4C7D6B38BC99}</Project>
       <Name>DependencyResolver</Name>
     </ProjectReference>
-    <ProjectReference Include="..\D\DAL.EF.csproj">
-      <Project>{40d352e7-6305-4680-96fe-b811dab2f119}</Project>
-      <Name>DAL.EF</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

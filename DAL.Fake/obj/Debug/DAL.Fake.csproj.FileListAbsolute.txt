@@ -1,0 +1,8 @@
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\DAL.Fake\bin\Debug\DAL.Fake.dll
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\DAL.Fake\bin\Debug\DAL.Fake.pdb
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\DAL.Fake\bin\Debug\DAL.Interface.dll
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\DAL.Fake\bin\Debug\DAL.Interface.pdb
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\DAL.Fake\obj\Debug\DAL.Fake.csprojResolveAssemblyReference.cache
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\DAL.Fake\obj\Debug\DAL.Fake.csproj.CoreCompileInputs.cache
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\DAL.Fake\obj\Debug\DAL.Fake.dll
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\DAL.Fake\obj\Debug\DAL.Fake.pdb

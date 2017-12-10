@@ -3,8 +3,6 @@ using BLL.Interface.Entities;
 using BLL.Interface.Interfaces;
 using Ninject;
 using DependencyResolver;
-using System.Linq;
-using DAL.EF;
 
 namespace PL.Console
 {
@@ -33,21 +31,26 @@ namespace PL.Console
                 System.Console.WriteLine(e.Message);
             }
             System.Console.ReadKey();
-
         }
 
         private static void Test(IAccountService service)
         {
+            
             service.OpenAccount(AccountType.Base, AccountNumberCreateService,"Ira Vinnichek");
             service.OpenAccount(AccountType.Gold, AccountNumberCreateService, "Kate Shenets");
             service.OpenAccount(AccountType.Silver, AccountNumberCreateService, "Korzhova Lera");
             service.OpenAccount(AccountType.Base, AccountNumberCreateService, "Ivanov Kirill");
-
+            var list = service.GetAllAccounts();
+            foreach (var user in list)
+            {
+                System.Console.WriteLine(user.AccountNumber);
+            }
+            /*
             foreach (var item in service.GetAllAccounts())
             {
                 System.Console.WriteLine(item);
             }
-
+            /*
             System.Console.WriteLine("------");
 
             //service.CloseAccount("1");
@@ -71,6 +74,7 @@ namespace PL.Console
             {
                 System.Console.WriteLine(item);
             }
+            */
         }
     }
 }

@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Linq.Expressions;
-using BLL;
 using BLL.Interface.Entities;
 using BLL.Interface.Interfaces;
 using BLL.ServiceImplementation;
@@ -27,7 +25,7 @@ namespace BLL.Tests
 
             var accountService = new AccountService(repositoryMock.Object);
 
-            accountService.OpenAccount(name, AccountType.Base, accountNumberCreateServiceMock.Object);
+            accountService.OpenAccount(AccountType.Base, accountNumberCreateServiceMock.Object, name);
 
             accountNumberCreateServiceMock.Verify(
                 service => service.Create(0), Times.AtLeastOnce);
@@ -43,7 +41,7 @@ namespace BLL.Tests
 
             var accountService = new AccountService(repositoryMock.Object);
 
-            accountService.OpenAccount(name, AccountType.Base, accountNumberCreateServiceMock.Object);
+            accountService.OpenAccount(AccountType.Base, accountNumberCreateServiceMock.Object, name);
 
             repositoryMock.Verify(
                 repository => repository.Create(It.Is<DalAccount>(account => string.Equals(account.AccountNumber, accountNumber, StringComparison.Ordinal))), Times.Once);
@@ -61,7 +59,7 @@ namespace BLL.Tests
 
             var accountService = new AccountService(repositoryMock.Object);
 
-            accountService.OpenAccount(name, AccountType.Base, accountNumberCreateServiceMock.Object);
+            accountService.OpenAccount(AccountType.Base, accountNumberCreateServiceMock.Object, name);
 
             var accNumbers = accountService.GetAllAccounts().Select(acc => acc.AccountNumber).ToArray();
 
@@ -85,7 +83,7 @@ namespace BLL.Tests
 
             var accountService = new AccountService(repositoryMock.Object);
 
-            accountService.OpenAccount(name, AccountType.Base, accountNumberCreateServiceMock.Object);
+            accountService.OpenAccount(AccountType.Base, accountNumberCreateServiceMock.Object, name);
 
             var accNumbers = accountService.GetAllAccounts().Select(acc => acc.AccountNumber).ToArray();
 

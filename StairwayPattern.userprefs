@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{8D60E7CA-BFAF-406E-893B-6979F1ACC81A}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BLL/ServiceImplementation/AccountNumberCreator.cs">
+    <Files>
+      <File FileName="BLL/ServiceImplementation/AccountNumberCreator.cs" Line="9" Column="2" />
+      <File FileName="BLL/ServiceImplementation/AccountService.cs" Line="40" Column="1" />
+      <File FileName="BLL.Interface/Entities/Account.cs" Line="11" Column="35" />
+      <File FileName="BLL.Interface/Entities/AccountType.cs" Line="11" Column="1" />
+      <File FileName="BLL.Interface/Entities/BaseAccount.cs" Line="10" Column="43" />
+      <File FileName="BLL.Interface/Entities/SilverAccount.cs" Line="21" Column="63" />
+      <File FileName="BLL.Interface/Interfaces/IAccountService.cs" Line="10" Column="49" />
+      <File FileName="BLL.Interface/Interfaces/IAccountNumberCreateService.cs" Line="3" Column="49" />
+      <File FileName="DAL/FakeRepository.cs" Line="40" Column="1" />
+      <File FileName="PL.Console/Program.cs" Line="61" Column="55" />
+      <File FileName="DAL.Interface/IRepository.cs" Line="11" Column="38" />
+      <File FileName="BLL.Interface/Entities/GoldAccount.cs" Line="13" Column="19" />
+      <File FileName="BLL.Tests/AccountTests.cs" Line="66" Column="13" />
+      <File FileName="DependencyResolver/NInjectDependencyResolver.cs" Line="23" Column="2" />
+      <File FileName="PL.Console/packages.config" Line="1" Column="1" />
+      <File FileName="BLL.Tests/packages.config" Line="6" Column="12" />
+      <File FileName="D/MyClass.cs" Line="11" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.PL.Console PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.BLL.Tests PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

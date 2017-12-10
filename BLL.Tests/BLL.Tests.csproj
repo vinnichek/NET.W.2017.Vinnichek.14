@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -55,10 +55,6 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{2C09A78F-009B-484B-BD9B-9D9449EF2DB9}</Project>
       <Name>BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{75907038-F0BD-4906-A241-C45D9447F2CE}</Project>
-      <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

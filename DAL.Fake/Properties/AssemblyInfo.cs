@@ -1,26 +1,36 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 
-// Information about this assembly is defined by the following attributes. 
-// Change them to the values specific to your project.
-
-[assembly: AssemblyTitle("DAL")]
+// Общие сведения об этой сборке предоставляются следующим набором
+// набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
+// связанные со сборкой.
+[assembly: AssemblyTitle("DAL.Fake")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("${AuthorCopyright}")]
+[assembly: AssemblyProduct("DAL.Fake")]
+[assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
-// The assembly version has the format "{Major}.{Minor}.{Build}.{Revision}".
-// The form "{Major}.{Minor}.*" will automatically update the build and revision,
-// and "{Major}.{Minor}.{Build}.*" will update just the revision.
+// Установка значения False для параметра ComVisible делает типы в этой сборке невидимыми
+// для компонентов COM. Если необходимо обратиться к типу в этой сборке через
+// COM, задайте атрибуту ComVisible значение TRUE для этого типа.
+[assembly: ComVisible(false)]
 
-[assembly: AssemblyVersion("1.0.*")]
+// Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
+[assembly: Guid("3e054d9e-3b08-4229-91fb-881905975404")]
 
-// The following attributes are used to specify the signing key for the assembly, 
-// if desired. See the Mono documentation for more information about signing.
-
-//[assembly: AssemblyDelaySign(false)]
-//[assembly: AssemblyKeyFile("")]
+// Сведения о версии сборки состоят из следующих четырех значений:
+//
+//      Основной номер версии
+//      Дополнительный номер версии
+//   Номер сборки
+//      Редакция
+//
+// Можно задать все значения или принять номер сборки и номер редакции по умолчанию.
+// используя "*", как показано ниже:
+// [assembly: AssemblyVersion("1.0.*")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]

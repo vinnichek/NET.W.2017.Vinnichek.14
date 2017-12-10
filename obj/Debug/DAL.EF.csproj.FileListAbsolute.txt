@@ -1,0 +1,2 @@
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\obj\Debug\DAL.EF.csprojResolveAssemblyReference.cache
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\obj\Debug\DAL.EF.csproj.CoreCompileInputs.cache
