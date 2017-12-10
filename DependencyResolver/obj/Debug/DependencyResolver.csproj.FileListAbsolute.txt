@@ -36,3 +36,10 @@ C:\Users\Ira Vinnichek\Desktop\StairwayPattern\DependencyResolver\bin\Debug\DAL.
 C:\Users\Ira Vinnichek\Desktop\StairwayPattern\DependencyResolver\bin\Debug\ORM.dll
 C:\Users\Ira Vinnichek\Desktop\StairwayPattern\DependencyResolver\bin\Debug\ORM.pdb
 C:\Users\Ira Vinnichek\Desktop\StairwayPattern\DependencyResolver\bin\Debug\ORM.dll.config
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\DependencyResolver\bin\Debug\DependencyResolver.dll.config
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\DependencyResolver\bin\Debug\DAL.Fake.dll
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\DependencyResolver\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\DependencyResolver\bin\Debug\Ninject.Web.Common.dll
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\DependencyResolver\bin\Debug\DAL.Fake.pdb
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\DependencyResolver\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\DependencyResolver\bin\Debug\Ninject.Web.Common.xml

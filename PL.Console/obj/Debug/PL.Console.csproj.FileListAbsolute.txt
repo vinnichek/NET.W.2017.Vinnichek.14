@@ -41,3 +41,6 @@ C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\bin\Debug\PL.Console.e
 C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\bin\Debug\ORM.dll
 C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\bin\Debug\ORM.pdb
 C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\bin\Debug\ORM.dll.config
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\bin\Debug\Ninject.Web.Common.dll
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\bin\Debug\DependencyResolver.dll.config
+C:\Users\Ira Vinnichek\Desktop\StairwayPattern\PL.Console\bin\Debug\Ninject.Web.Common.xml

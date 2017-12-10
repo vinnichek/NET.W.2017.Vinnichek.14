@@ -9,20 +9,19 @@ namespace PL.Console
     class Program
     {
         private static readonly IAccountNumberCreateService AccountNumberCreateService;
-        private static readonly IKernel NinjectKernel;
+        private static readonly IKernel resolver;
 
         static Program()
         {
-            NinjectKernel = new StandardKernel();
-            NInjectDependencyResolver.Configure(NinjectKernel);
-            AccountNumberCreateService = NinjectKernel.Get<IAccountNumberCreateService>();
+            resolver = new StandardKernel();
+            resolver.ConfigurateResolverConsole();
         }
 
         private static void Main()
         {
             try
             {
-                var service = NinjectKernel.Get<IAccountService>();
+                var service = resolver.Get<IAccountService>();
                 Test(service);
             }
 
@@ -35,11 +34,12 @@ namespace PL.Console
 
         private static void Test(IAccountService service)
         {
-            
+            /*
             service.OpenAccount(AccountType.Base, AccountNumberCreateService,"Ira Vinnichek");
             service.OpenAccount(AccountType.Gold, AccountNumberCreateService, "Kate Shenets");
             service.OpenAccount(AccountType.Silver, AccountNumberCreateService, "Korzhova Lera");
             service.OpenAccount(AccountType.Base, AccountNumberCreateService, "Ivanov Kirill");
+            */
             var list = service.GetAllAccounts();
             foreach (var user in list)
             {

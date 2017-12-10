@@ -1,25 +1,41 @@
-﻿using System;
-using BLL.Interface.Interfaces;
+﻿using BLL.Interface.Interfaces;
 using BLL.ServiceImplementation;
 using DAL.EF;
-//using DAL.Fake;
 using DAL.Interface;
 using Ninject;
+using Ninject.Web.Common;
+using System.Data.Entity;
+using ORM;
 
 namespace DependencyResolver
 {
-    public static class NInjectDependencyResolver
+    public static class ResolverConfig
     {
-        public static void Configure(IKernel kernel)
+        public static void ConfigurateResolverWeb(this IKernel kernel)
         {
-            kernel.Bind<IRepository>().To<DBRepository>().InSingletonScope();
+            Configure(kernel, true);
+        }
 
-           // kernel.Bind<IRepository>().To<FakeRepository>().InSingletonScope();
-            kernel.Bind<IAccountNumberCreateService>().To<AccountNumberCreator>().InSingletonScope();
+        public static void ConfigurateResolverConsole(this IKernel kernel)
+        {
+            Configure(kernel, false);
+        }
 
-            var fakeRepository = kernel.Get<IRepository>();
-            kernel.Bind<IAccountService>().To<AccountService>()
-                  .WithConstructorArgument("accountRepository", fakeRepository);
+        private static void Configure(IKernel kernel, bool isWeb)
+        {
+            if (isWeb)
+            {
+                kernel.Bind<IAccountNumberCreateService>().To<AccountNumberCreator>().InRequestScope();
+                kernel.Bind<DbContext>().To<EntityModel>().InRequestScope();
+            }
+            else
+            {
+                kernel.Bind<IAccountNumberCreateService>().To<AccountNumberCreator>().InSingletonScope();
+                kernel.Bind<DbContext>().To<EntityModel>().InSingletonScope();
+            }
+
+            kernel.Bind<IAccountService>().To<AccountService>();
+            kernel.Bind<IRepository>().To<DBRepository>();
         }
     }
 }
