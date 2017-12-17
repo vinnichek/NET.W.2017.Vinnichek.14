@@ -16,3 +16,11 @@ C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Interface\obj\Debug\BLL.Inter
 C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Interface\obj\Debug\BLL.Interface.csprojResolveAssemblyReference.cache
 C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Interface\bin\Debug\DAL.Interface.dll
 C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Interface\bin\Debug\DAL.Interface.pdb
+C:\Users\Ira Vinnichek\Desktop\NET.W.2017.Vinnichek.14-master\BLL.Interface\bin\Debug\BLL.Interface.dll
+C:\Users\Ira Vinnichek\Desktop\NET.W.2017.Vinnichek.14-master\BLL.Interface\bin\Debug\BLL.Interface.pdb
+C:\Users\Ira Vinnichek\Desktop\NET.W.2017.Vinnichek.14-master\BLL.Interface\bin\Debug\DAL.Interface.dll
+C:\Users\Ira Vinnichek\Desktop\NET.W.2017.Vinnichek.14-master\BLL.Interface\bin\Debug\DAL.Interface.pdb
+C:\Users\Ira Vinnichek\Desktop\NET.W.2017.Vinnichek.14-master\BLL.Interface\obj\Debug\BLL.Interface.csprojResolveAssemblyReference.cache
+C:\Users\Ira Vinnichek\Desktop\NET.W.2017.Vinnichek.14-master\BLL.Interface\obj\Debug\BLL.Interface.csproj.CoreCompileInputs.cache
+C:\Users\Ira Vinnichek\Desktop\NET.W.2017.Vinnichek.14-master\BLL.Interface\obj\Debug\BLL.Interface.dll
+C:\Users\Ira Vinnichek\Desktop\NET.W.2017.Vinnichek.14-master\BLL.Interface\obj\Debug\BLL.Interface.pdb

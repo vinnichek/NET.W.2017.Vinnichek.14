@@ -38,3 +38,7 @@ C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Tests\obj\Debug\BLL.Tests.csp
 C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Tests\obj\Debug\BLL.Tests.csproj.CoreCompileInputs.cache
 C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Tests\obj\Debug\BLL.Tests.dll
 C:\Users\Ira Vinnichek\Desktop\StairwayPattern\BLL.Tests\obj\Debug\BLL.Tests.pdb
+C:\Users\Ira Vinnichek\Desktop\NET.W.2017.Vinnichek.14-master\BLL.Tests\obj\Debug\BLL.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Ira Vinnichek\Desktop\NET.W.2017.Vinnichek.14-master\BLL.Tests\obj\Debug\BLL.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Ira Vinnichek\Desktop\NET.W.2017.Vinnichek.14-master\BLL.Tests\obj\Debug\BLL.Tests.dll
+C:\Users\Ira Vinnichek\Desktop\NET.W.2017.Vinnichek.14-master\BLL.Tests\obj\Debug\BLL.Tests.pdb

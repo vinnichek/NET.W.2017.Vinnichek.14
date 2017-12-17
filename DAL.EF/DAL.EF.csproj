@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBRepository.cs" />
+    <Compile Include="UnitOfWork.cs" />
     <Compile Include="Mappers\EntitiesMappers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

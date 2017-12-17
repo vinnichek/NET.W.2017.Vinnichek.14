@@ -9,33 +9,25 @@ using ORM;
 
 namespace DependencyResolver
 {
-    public static class ResolverConfig
+    public class NInjectDependencyResolver
     {
-        public static void ConfigurateResolverWeb(this IKernel kernel)
+        public static void Configure(IKernel kernel)
         {
-            Configure(kernel, true);
-        }
+            // kernel.Bind<IBankAccountRepository>().To<FakeRepository>().WithConstructorArgument("filePath", "accounts");
+            kernel.Bind<IRepository>().To<DBRepository>().InSingletonScope();
+            kernel.Bind<IAccountNumberCreateService>().To<AccountNumberCreator>().InSingletonScope();
+            kernel.Bind<IUnitOfWork>().To<UnitOfWork>().InSingletonScope();
 
-        public static void ConfigurateResolverConsole(this IKernel kernel)
-        {
-            Configure(kernel, false);
-        }
+            kernel.Bind<DbContext>().To<EntityModel>().InSingletonScope();
 
-        private static void Configure(IKernel kernel, bool isWeb)
-        {
-            if (isWeb)
-            {
-                kernel.Bind<IAccountNumberCreateService>().To<AccountNumberCreator>().InRequestScope();
-                kernel.Bind<DbContext>().To<EntityModel>().InRequestScope();
-            }
-            else
-            {
-                kernel.Bind<IAccountNumberCreateService>().To<AccountNumberCreator>().InSingletonScope();
-                kernel.Bind<DbContext>().To<EntityModel>().InSingletonScope();
-            }
+            var accountRepository = kernel.Get<IRepository>();
+            var unitOfWork = kernel.Get<IUnitOfWork>();
 
-            kernel.Bind<IAccountService>().To<AccountService>();
-            kernel.Bind<IRepository>().To<DBRepository>();
+            kernel
+                .Bind<IAccountService>()
+                .To<AccountService>()
+                .WithConstructorArgument("repository", accountRepository)
+                .WithConstructorArgument("unitOfWork", unitOfWork);
         }
     }
 }

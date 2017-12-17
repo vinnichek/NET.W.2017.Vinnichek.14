@@ -11,11 +11,13 @@ namespace BLL.ServiceImplementation
 {
     public class AccountService : IAccountService
     {
-        private IRepository repository;
+        private readonly IRepository repository;
+        private readonly IUnitOfWork unitOfWork;
 
-        public AccountService(IRepository repository) 
+        public AccountService(IRepository repository, IUnitOfWork unitOfWork) 
         {
             this.repository = repository;
+            this.unitOfWork = unitOfWork;
         }
 
         public void OpenAccount(AccountType accountType, IAccountNumberCreateService creator, string ownerName,  decimal balance = 0m, int benefitPoints = 0)
@@ -24,12 +26,14 @@ namespace BLL.ServiceImplementation
             var account = CreateAccountType(accountNumber, accountType, ownerName, balance, benefitPoints);
 
             repository.Create(account.ToDalAccount());
+            unitOfWork.Commit();
         }
 
         public void CloseAccount(string accountNumber)
         {
             var account = repository.GetByNumber(accountNumber);
             repository.Delete(account);
+            unitOfWork.Commit();
         }
 
         public void DepositAccount(string accountNumber, decimal amount)
@@ -37,6 +41,7 @@ namespace BLL.ServiceImplementation
             var account = repository.GetByNumber(accountNumber).ToBllAccount();
             account.Deposit(amount);
             repository.Update(account.ToDalAccount());
+            unitOfWork.Commit();
         }
 
         public void WithdrawAccount(string accountNumber, decimal amount)
@@ -44,6 +49,7 @@ namespace BLL.ServiceImplementation
             Account account = repository.GetByNumber(accountNumber).ToBllAccount();
             account.Whithdraw(amount);
             repository.Update(account.ToDalAccount());
+            unitOfWork.Commit();
         }
 
         public IEnumerable<Account> GetAllAccounts() => repository.GetAllAccounts().ToBllAccounts();

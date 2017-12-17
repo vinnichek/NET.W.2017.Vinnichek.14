@@ -11,3 +11,9 @@ C:\Users\Ira Vinnichek\Desktop\StairwayPattern\DAL.Interface\bin\Debug\DAL.Inter
 C:\Users\Ira Vinnichek\Desktop\StairwayPattern\DAL.Interface\obj\Debug\DAL.Interface.csproj.CoreCompileInputs.cache
 C:\Users\Ira Vinnichek\Desktop\StairwayPattern\DAL.Interface\obj\Debug\DAL.Interface.dll
 C:\Users\Ira Vinnichek\Desktop\StairwayPattern\DAL.Interface\obj\Debug\DAL.Interface.pdb
+C:\Users\Ira Vinnichek\Desktop\NET.W.2017.Vinnichek.14-master\DAL.Interface\bin\Debug\DAL.Interface.dll
+C:\Users\Ira Vinnichek\Desktop\NET.W.2017.Vinnichek.14-master\DAL.Interface\bin\Debug\DAL.Interface.pdb
+C:\Users\Ira Vinnichek\Desktop\NET.W.2017.Vinnichek.14-master\DAL.Interface\obj\Debug\DAL.Interface.csprojResolveAssemblyReference.cache
+C:\Users\Ira Vinnichek\Desktop\NET.W.2017.Vinnichek.14-master\DAL.Interface\obj\Debug\DAL.Interface.csproj.CoreCompileInputs.cache
+C:\Users\Ira Vinnichek\Desktop\NET.W.2017.Vinnichek.14-master\DAL.Interface\obj\Debug\DAL.Interface.dll
+C:\Users\Ira Vinnichek\Desktop\NET.W.2017.Vinnichek.14-master\DAL.Interface\obj\Debug\DAL.Interface.pdb
