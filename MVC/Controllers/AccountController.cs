@@ -15,7 +15,7 @@ namespace MVC.Controllers
     public class AccountController : Controller
     {
         private const string HostEmail = "vinnichekira@gmail.com";
-        private const string HostEmailPassword = "dbyybxtrbhbyf"; 
+        private const string HostEmailPassword = "myPassword"; 
 
         private readonly IAccountService accountService;
         private readonly IAccountNumberCreateService accountNumberCreator;
