@@ -8,7 +8,7 @@ namespace MVC.Controllers
     public class AccountController : Controller
     {
         private const string HostEmail = "vinnichekira@gmail.com";
-        private const string HostEmailPassword = "dbyybxtrbhbyf"; 
+        private const string HostEmailPassword = "myPassword"; 
 
         private readonly IAccountService accountService;
         private readonly IAccountNumberCreateService accountNumberCreator;
@@ -144,12 +144,28 @@ namespace MVC.Controllers
             }
             return View();
         }
+<<<<<<< HEAD
         
         private string GetAccountEmail(string accountNumber)
         {
             string accountInfo = accountService.GetAccoutInformation(accountNumber);
             var data = accountInfo.Split(' ');
             return data[data.Length - 6];
+=======
+
+        private Task SendMailAsync(string to, string subject, string message)
+        {
+            var mailData = new MailData
+            {
+                To = to,
+                From = HostEmail,
+                FromPassword = HostEmailPassword,
+                Subject = subject,
+                Message = message
+            };
+
+            return mailService.SendMailAsync(mailData);
+>>>>>>> origin/master
         }
     }
 }
