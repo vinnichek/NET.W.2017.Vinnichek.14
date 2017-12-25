@@ -10,14 +10,12 @@ namespace ConsoleApp1
     {
         private static readonly IAccountNumberCreateService AccountNumberCreateService;
         private static readonly IKernel Kernel;
-        //private static readonly IMailService GmailService;
 
         static Program()
         {
             Kernel = new StandardKernel();
             NInjectDependencyResolver.Configure(Kernel);
             AccountNumberCreateService = Kernel.Get<IAccountNumberCreateService>();
-           // GmailService = Kernel.Get<IMailService>();
         }
 
         private static void Main()
@@ -40,26 +38,16 @@ namespace ConsoleApp1
 
         private static void Test(IAccountService service)
         {
-            //service.OpenAccount(AccountType.Silver, AccountNumberCreateService, "Korzhova Lera", "vinnichekira@gmail.com");            
+            service.OpenAccount(AccountType.Silver, AccountNumberCreateService, "Korzhova Lera", "vinnichekira@gmail.com");            
             service.OpenAccount(AccountType.Gold, AccountNumberCreateService, "f", "i@gmail.com", 0, 0);
+            
             var list1 = service.GetAllAccounts();
 
             foreach (var user in list1)
             {
                 Console.WriteLine(user);
             }
-            /*
-var data = new MailData {
-    From = "vinnichekira@gmail.com",
-    To = "vinnichekira@gmail.com",
-    FromPassword = "dbyybxtrbhbyf",
-    Message = "<h1>Hello, Ira</h1>",
-    Subject = "Test123"
-};
-GmailService.SendMailAsync(data).Wait();
-Console.WriteLine("okay");
-Console.ReadLine();
-return;*/
+            
             /*
             service.DepositAccount("1", 100000);
            
