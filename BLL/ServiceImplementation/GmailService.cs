@@ -1,8 +1,5 @@
 ﻿using BLL.Interface.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using BLL.Interface.Entities;
 using System.Net.Mail;
@@ -14,7 +11,7 @@ namespace BLL.ServiceImplementation
     {
         public void SendMail(MailData data)
         {
-            var result = this.ConfigureMail(data);
+            var result = ConfigureMail(data);
             var email = result.Item1;
             var smtp = result.Item2;
             smtp.Send(email);
@@ -22,13 +19,13 @@ namespace BLL.ServiceImplementation
 
         public Task SendMailAsync(MailData data)
         {
-            var result = this.ConfigureMail(data);
+            var result = ConfigureMail(data);
             var email = result.Item1;
             var smtp = result.Item2;
             return smtp.SendMailAsync(email);
         }
 
-        private Tuple<MailMessage,SmtpClient> ConfigureMail(MailData data)
+        private Tuple<MailMessage, SmtpClient> ConfigureMail(MailData data)
         {
             var from = new MailAddress(data.From);
             var to = new MailAddress(data.To);

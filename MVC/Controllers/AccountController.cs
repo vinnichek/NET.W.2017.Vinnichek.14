@@ -1,14 +1,7 @@
 ﻿using BLL.Interface.Interfaces;
 using MVC.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using System.Reflection;
 using System.Threading.Tasks;
-using BLL.Interface.Entities;
-using System.Web.UI.WebControls;
+using System.Web.Mvc;
 
 namespace MVC.Controllers
 {
@@ -40,7 +33,7 @@ namespace MVC.Controllers
             if (ModelState.IsValid)
             {
                 var accNumber = accountService.OpenAccount(account.Type, accountNumberCreator, account.Owner, account.Email, account.Balance);
-                await SendMailAsync("vinnichekira@gmail.com", "Open Account", $"Thank you for registration, {account.Owner}! Your Account Number is {accNumber}");
+                await accountService.SendMail(account.Email, $"Thank you for using our bank, {account.Owner}. Your account number is {accNumber}.", "Account is opened.");
                 return RedirectToAction("AccountIsOpened");
             }
             return View();
@@ -57,7 +50,7 @@ namespace MVC.Controllers
         {
             return View();
         }
-
+        
         [HttpPost]
         public ActionResult DepositMoney()
         {
@@ -74,13 +67,14 @@ namespace MVC.Controllers
             if (ModelState.IsValid)
             {
                 accountService.DepositAccount(model.AccountNumber, model.Amount);
-                await SendMailAsync("vinnichekira@gmail.com", "Depothit Money", $"Deposit {model.Amount} to your bank account.");
+                var accEmail = GetAccountEmail(model.AccountNumber);
+                await accountService.SendMail(accEmail, $"{model.Amount} were deposit to your account.", "Deposit money.");
                 TempData["OperationSuccess"] = true;
                 return RedirectToAction("AccountOperations");
             }
             return View();
         }
-
+        
         [HttpPost]
         public ActionResult WithdrawMoney()
         {
@@ -97,13 +91,14 @@ namespace MVC.Controllers
             if (ModelState.IsValid)
             {
                 accountService.WithdrawAccount(model.AccountNumber, model.Amount);
-                await SendMailAsync("vinnichekira@gmail.com", "Withdraw Money", $"Withdraw {model.Amount} from your bank account.");
+                var accEmail = GetAccountEmail(model.AccountNumber);
+                await accountService.SendMail(accEmail, $"{model.Amount} were withdraw from your account.", "Withdraw money.");
                 TempData["OperationSuccess"] = true;
                 return RedirectToAction("AccountOperations");
             }
             return View();
         }
-
+        
         [HttpPost]
         public ActionResult AccountInfo()
         {
@@ -149,19 +144,12 @@ namespace MVC.Controllers
             }
             return View();
         }
-
-        private Task SendMailAsync(string to, string subject, string message)
+        
+        private string GetAccountEmail(string accountNumber)
         {
-            var mailData = new MailData
-            {
-                To = to,
-                From = HostEmail,
-                FromPassword = HostEmailPassword,
-                Subject = subject,
-                Message = message
-            };
-
-            return mailService.SendMailAsync(mailData);
+            string accountInfo = accountService.GetAccoutInformation(accountNumber);
+            var data = accountInfo.Split(' ');
+            return data[data.Length - 6];
         }
     }
 }
