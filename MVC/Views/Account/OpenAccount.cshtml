@@ -4,7 +4,7 @@
     ViewBag.Title = "OpenAccount";
 }
 
-<h2>Open account</h2>
+<h2 class="page-name_text">Open account</h2>
 
 @using (Html.BeginForm()) 
 {
@@ -14,40 +14,52 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-5" })
+            <div class="col-md-7 input-group">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-align-justify"></span>
+                </span>
                 @Html.EnumDropDownListFor(model => model.Type, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Owner, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.Owner, htmlAttributes: new { @class = "control-label col-md-5" })
+            <div class="col-md-7 input-group">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-user"></span>
+                </span>
                 @Html.EditorFor(model => model.Owner, new { htmlAttributes = new { @class = "form-control", placeholder = "Ira Vinnichek" } })
                 @Html.ValidationMessageFor(model => model.Owner, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", placeholder = "Ira Vinnichek" } })
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-5" })
+            <div class="col-md-7 input-group">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-send"></span>
+                </span>
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", placeholder = "vinnichekira@gmail.com" } })
                 @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Balance, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.Balance, htmlAttributes: new { @class = "control-label col-md-5" })
+            <div class="col-md-7 input-group">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-usd"></span>
+                </span>
                 @Html.EditorFor(model => model.Balance, new { htmlAttributes = new { @class = "form-control", placeholder = "0" } })
                 @Html.ValidationMessageFor(model => model.Balance, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+            <div class="submit_button">
+                <input type="submit" value="Open Account" class="btn btn-default" />
             </div>
         </div>
     </div>

@@ -7,13 +7,31 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    margin: auto;
 }
-
-
+.footer-text {
+    text-align: center;
+}
 .input-validation-error {
     border: 1px solid red;
 }
 
+.page-name_text {
+    text-align: center;
+}
+
+.operation_buttons {
+    text-align: center;
+}
+
+.operation-name_text {
+    margin-top: 30px;
+}
+
+.submit_button {
+    text-align: center;
+    margin-top: 10px;
+}
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
@@ -28,6 +46,12 @@ textarea {
     max-width: 280px;
 }
 
+/*
+#results {
+    display: flex;
+    justify-content: center;
+}
+*/
 .my_button {
     width: 200px;
     margin-top: 5px;

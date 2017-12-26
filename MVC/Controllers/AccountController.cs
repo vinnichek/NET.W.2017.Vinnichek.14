@@ -8,7 +8,7 @@ namespace MVC.Controllers
     public class AccountController : Controller
     {
         private const string HostEmail = "vinnichekira@gmail.com";
-        private const string HostEmailPassword = "myPassword"; 
+        private const string HostEmailPassword = "dbyybxtrbhbyf"; 
 
         private readonly IAccountService accountService;
         private readonly IAccountNumberCreateService accountNumberCreator;
@@ -68,7 +68,7 @@ namespace MVC.Controllers
             {
                 accountService.DepositAccount(model.AccountNumber, model.Amount);
                 var accEmail = GetAccountEmail(model.AccountNumber);
-                await accountService.SendMail(accEmail, $"{model.Amount} were deposit to your account.", "Deposit money.");
+                await accountService.SendMail(accEmail, $"Deposit {model.Amount} to your account.", "Deposit money.");
                 TempData["OperationSuccess"] = true;
                 return RedirectToAction("AccountOperations");
             }
@@ -92,7 +92,7 @@ namespace MVC.Controllers
             {
                 accountService.WithdrawAccount(model.AccountNumber, model.Amount);
                 var accEmail = GetAccountEmail(model.AccountNumber);
-                await accountService.SendMail(accEmail, $"{model.Amount} were withdraw from your account.", "Withdraw money.");
+                await accountService.SendMail(accEmail, $"Withdraw {model.Amount} from your account.", "Withdraw money.");
                 TempData["OperationSuccess"] = true;
                 return RedirectToAction("AccountOperations");
             }
@@ -144,28 +144,12 @@ namespace MVC.Controllers
             }
             return View();
         }
-<<<<<<< HEAD
         
         private string GetAccountEmail(string accountNumber)
         {
             string accountInfo = accountService.GetAccoutInformation(accountNumber);
             var data = accountInfo.Split(' ');
             return data[data.Length - 6];
-=======
-
-        private Task SendMailAsync(string to, string subject, string message)
-        {
-            var mailData = new MailData
-            {
-                To = to,
-                From = HostEmail,
-                FromPassword = HostEmailPassword,
-                Subject = subject,
-                Message = message
-            };
-
-            return mailService.SendMailAsync(mailData);
->>>>>>> origin/master
         }
     }
 }

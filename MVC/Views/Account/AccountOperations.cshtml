@@ -3,31 +3,30 @@
     ViewBag.Title = "AccountOperations";
 }
 
-<div>
-        <h2>Operations with Account</h2>
+<h2 class="page-name_text">Operations with Account</h2>
+
+<div class="operation_buttons">
         @using (Ajax.BeginForm("DepositMoney", "Account", new AjaxOptions { UpdateTargetId = "results" }))
         {
-            <button type="submit" value="depositMoney" name="ButtonType" class="my_button btn-custom btn-warning btn-lg">Deposit money</button> <br />
+            <button type="submit" value="depositMoney" name="ButtonType" class="my_button btn btn-dark btn-lg">Deposit money</button> <br />
         }
 
         @using (Ajax.BeginForm("WithdrawMoney", "Account", new AjaxOptions { UpdateTargetId = "results" }))
         {
-            <button type="submit" value="withdrawMoney" class="my_button btn-custom btn-warning btn-lg">Withdraw money</button> <br />
+            <button type="submit" value="withdrawMoney" class="my_button btn btn-dark btn-lg">Withdraw money</button> <br />
         }
 
         @using (Ajax.BeginForm("AccountInfo", "Account", new AjaxOptions { UpdateTargetId = "results" }))
         {
-            <button type="submit" value="accountInfo" class="my_button btn-custom btn-warning btn-lg">Account info</button> <br />
+            <button type="submit" value="accountInfo" class="my_button btn btn-dark btn-lg">Account info</button> <br />
         }
 
         @using (Ajax.BeginForm("CloseAccount", "Account", new AjaxOptions { UpdateTargetId = "results" }))
         {
-            <button type="submit" value="closeAccount" class="my_button btn-custom btn-warning btn-lg">Close account</button> <br />
+            <button type="submit" value="closeAccount" class="my_button btn btn-dark btn-lg">Close account</button> <br />
         }
-    <div id="results">
+    <div id="results" class="col-md-12">
         @{
-
-
             bool? isOperationSuccess = TempData["OperationSuccess"] as bool?;
             if (isOperationSuccess.HasValue && isOperationSuccess.Value)
             {
