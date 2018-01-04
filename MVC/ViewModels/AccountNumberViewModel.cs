@@ -10,6 +10,7 @@ namespace MVC.ViewModels
     {
         [Display(Name = "Account number")]
         [Required(ErrorMessage = "Account number is empty.", AllowEmptyStrings = false)]
+        [Range(1, int.MaxValue, ErrorMessage = "Account number is not valid.")]
         public string AccountNumber { get; set; }
     }
 }

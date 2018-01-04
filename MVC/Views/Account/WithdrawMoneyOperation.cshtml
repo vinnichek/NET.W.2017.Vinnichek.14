@@ -4,15 +4,13 @@
     ViewBag.Title = "WithdrawMoneyOperation";
 }
 
-<h2>WithdrawMoneyOperation</h2>
+<h3 class="text-center">Withdraw money</h3>
 
 @using (Html.BeginForm((string)ViewBag.Operation, "Account")) 
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>TransactionsViewModel</h4>
-        <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.AccountNumber, htmlAttributes: new { @class = "control-label col-md-2" })

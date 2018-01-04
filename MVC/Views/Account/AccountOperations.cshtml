@@ -3,36 +3,36 @@
     ViewBag.Title = "AccountOperations";
 }
 
-<h2 class="page-name_text">Operations with Account</h2>
+<h2 class="text-center">Operations with Account</h2>
 
 <div class="operation_buttons">
-        @using (Ajax.BeginForm("DepositMoney", "Account", new AjaxOptions { UpdateTargetId = "results" }))
-        {
-            <button type="submit" value="depositMoney" name="ButtonType" class="my_button btn btn-dark btn-lg">Deposit money</button> <br />
-        }
+    @using (Ajax.BeginForm("DepositMoney", "Account", new AjaxOptions { UpdateTargetId = "results" }))
+    {
+        <button type="submit" value="depositMoney" name="ButtonType" class="my_button btn btn-dark btn-lg">Deposit money</button> <br />
+    }
 
-        @using (Ajax.BeginForm("WithdrawMoney", "Account", new AjaxOptions { UpdateTargetId = "results" }))
-        {
-            <button type="submit" value="withdrawMoney" class="my_button btn btn-dark btn-lg">Withdraw money</button> <br />
-        }
+    @using (Ajax.BeginForm("WithdrawMoney", "Account", new AjaxOptions { UpdateTargetId = "results" }))
+    {
+        <button type="submit" value="withdrawMoney" class="my_button btn btn-dark btn-lg">Withdraw money</button> <br />
+    }
 
-        @using (Ajax.BeginForm("AccountInfo", "Account", new AjaxOptions { UpdateTargetId = "results" }))
-        {
-            <button type="submit" value="accountInfo" class="my_button btn btn-dark btn-lg">Account info</button> <br />
-        }
+    @using (Ajax.BeginForm("AccountInfo", "Account", new AjaxOptions { UpdateTargetId = "results" }))
+    {
+        <button type="submit" value="accountInfo" class="my_button btn btn-dark btn-lg">Account info</button> <br />
+    }
 
-        @using (Ajax.BeginForm("CloseAccount", "Account", new AjaxOptions { UpdateTargetId = "results" }))
-        {
-            <button type="submit" value="closeAccount" class="my_button btn btn-dark btn-lg">Close account</button> <br />
-        }
+    @using (Ajax.BeginForm("CloseAccount", "Account", new AjaxOptions { UpdateTargetId = "results" }))
+    {
+        <button type="submit" value="closeAccount" class="my_button btn btn-dark btn-lg">Close account</button> <br />
+    }
+
     <div id="results" class="col-md-12">
         @{
             bool? isOperationSuccess = TempData["OperationSuccess"] as bool?;
             if (isOperationSuccess.HasValue && isOperationSuccess.Value)
             {
                 TempData["OperationSuccess"] = false;
-                <h2>@ViewData["Message"]</h2>
-                <h1>Operation completed successfull!</h1>
+                <h3 class="text-center">@TempData["Message"]</h3>
             }
         }
     </div>

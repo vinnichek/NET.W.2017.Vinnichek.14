@@ -7,12 +7,8 @@ namespace MVC.Controllers
 {
     public class AccountController : Controller
     {
-        private const string HostEmail = "vinnichekira@gmail.com";
-        private const string HostEmailPassword = "dbyybxtrbhbyf"; 
-
         private readonly IAccountService accountService;
         private readonly IAccountNumberCreateService accountNumberCreator;
-        private readonly IMailService mailService;
 
         public AccountController()
         {
@@ -28,6 +24,7 @@ namespace MVC.Controllers
         public ActionResult OpenAccount() => View();
         
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<ActionResult> OpenAccount(AccountViewModel account)
         {
             if (ModelState.IsValid)
@@ -62,6 +59,7 @@ namespace MVC.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<ActionResult> DepositMoneyOperation(TransactionsViewModel model)
         {
             if (ModelState.IsValid)
@@ -70,6 +68,7 @@ namespace MVC.Controllers
                 var accEmail = GetAccountEmail(model.AccountNumber);
                 await accountService.SendMail(accEmail, $"Deposit {model.Amount} to your account.", "Deposit money.");
                 TempData["OperationSuccess"] = true;
+                TempData["Message"] = "Operation completed successfull!";
                 return RedirectToAction("AccountOperations");
             }
             return View();
@@ -86,6 +85,7 @@ namespace MVC.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<ActionResult> WithdrawMoneyOperation(TransactionsViewModel model)
         {
             if (ModelState.IsValid)
@@ -94,6 +94,7 @@ namespace MVC.Controllers
                 var accEmail = GetAccountEmail(model.AccountNumber);
                 await accountService.SendMail(accEmail, $"Withdraw {model.Amount} from your account.", "Withdraw money.");
                 TempData["OperationSuccess"] = true;
+                TempData["Message"] = "Operation completed successfull!";
                 return RedirectToAction("AccountOperations");
             }
             return View();
@@ -110,14 +111,13 @@ namespace MVC.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult AccountInfoOperation(AccountNumberViewModel model)
         {
             if (ModelState.IsValid)
             {
-                ViewData["Message"] = accountService.GetAccoutInformation(model.AccountNumber);
-                //TempData["AccountInfoSuccess"] = true;
+                TempData["Message"] = accountService.GetAccoutInformation(model.AccountNumber);
                 TempData["OperationSuccess"] = true;
-
                 return RedirectToAction("AccountOperations");
             }
             return View();
@@ -140,6 +140,8 @@ namespace MVC.Controllers
             if (ModelState.IsValid)
             {
                 accountService.CloseAccount(model.AccountNumber);
+                TempData["OperationSuccess"] = true;
+                TempData["Message"] = "Account is closed!";
                 return RedirectToAction("AccountOperations");
             }
             return View();

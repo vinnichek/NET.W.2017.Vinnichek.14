@@ -10,12 +10,14 @@ namespace ConsoleApp1
     {
         private static readonly IAccountNumberCreateService AccountNumberCreateService;
         private static readonly IKernel Kernel;
+        //private static readonly IMailService GmailService;
 
         static Program()
         {
             Kernel = new StandardKernel();
             NInjectDependencyResolver.Configure(Kernel);
             AccountNumberCreateService = Kernel.Get<IAccountNumberCreateService>();
+           // GmailService = Kernel.Get<IMailService>();
         }
 
         private static void Main()
@@ -38,27 +40,30 @@ namespace ConsoleApp1
 
         private static void Test(IAccountService service)
         {
+
             string accountInfo = service.GetAccoutInformation("1");
             var data = accountInfo.Split(' ');
             Console.WriteLine(data[data.Length - 6]);
-            service.OpenAccount(AccountType.Silver, AccountNumberCreateService, "Korzhova Lera", "vinnichekira@gmail.com");            
-            service.OpenAccount(AccountType.Gold, AccountNumberCreateService, "f", "i@gmail.com", 0, 0);
-            var list1 = service.GetAllAccounts();
-            service.SendMail("vinnichekira@gmail.com", "hello", "hi");
+            //service.OpenAccount(AccountType.Silver, AccountNumberCreateService, "Korzhova Lera", "vinnichekira@gmail.com");            
+            //service.OpenAccount(AccountType.Gold, AccountNumberCreateService, "f", "i@gmail.com", 0, 0);
+            //var list1 = service.GetAllAccounts();
+            //service.SendMail("vinnichekira@gmail.com", "hello", "hi");
             /* foreach (var user in list1)
              {
                  Console.WriteLine(user);
              }
-            
-            service.OpenAccount(AccountType.Silver, AccountNumberCreateService, "Korzhova Lera", "vinnichekira@gmail.com");            
-            service.OpenAccount(AccountType.Gold, AccountNumberCreateService, "f", "i@gmail.com", 0, 0);
-            
-            var list1 = service.GetAllAccounts();
-
-            foreach (var user in list1)
-            {
-                Console.WriteLine(user);
-            }
+             /*
+ var data = new MailData {
+     From = "vinnichekira@gmail.com",
+     To = "vinnichekira@gmail.com",
+     FromPassword = "dbyybxtrbhbyf",
+     Message = "<h1>Hello, Ira</h1>",
+     Subject = "Test123"
+ };
+ GmailService.SendMailAsync(data).Wait();
+ Console.WriteLine("okay");
+ Console.ReadLine();
+ return;*/
             /*
             service.DepositAccount("1", 100000);
            

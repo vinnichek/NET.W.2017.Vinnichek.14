@@ -68,7 +68,7 @@ namespace BLL.ServiceImplementation
             {
                 From = "vinnichekira@gmail.com",
                 To = to,
-                FromPassword = "mypassword",
+                FromPassword = "***",
                 Message = message,
                 Subject = subject
             };

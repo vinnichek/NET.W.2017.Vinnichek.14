@@ -1,9 +1,9 @@
 ﻿@model MVC.ViewModels.AccountNumberViewModel
 
-@using (Html.BeginForm("CloseAccountOperation", "Account", FormMethod.Post))
+@using (Html.BeginForm((string)ViewBag.Operation, "Account"))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h3 class="text-center">Close bank account</h3>
         <hr />

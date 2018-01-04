@@ -12,19 +12,15 @@
 .footer-text {
     text-align: center;
 }
+
 .input-validation-error {
     border: 1px solid red;
-}
-
-.page-name_text {
-    text-align: center;
 }
 
 .operation_buttons {
     text-align: center;
 }
-
-.operation-name_text {
+.text-center{
     margin-top: 30px;
 }
 
@@ -46,12 +42,6 @@ textarea {
     max-width: 280px;
 }
 
-/*
-#results {
-    display: flex;
-    justify-content: center;
-}
-*/
 .my_button {
     width: 200px;
     margin-top: 5px;
